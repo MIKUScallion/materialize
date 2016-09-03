@@ -3215,12 +3215,14 @@ nav ul a span.badge {
   height: 22px;
 }
 
-.side-nav span.badge.new {
+.side-nav span.badge.new,
+.collapsible span.badge.new {
   position: relative;
   background-color: transparent;
 }
 
-.side-nav span.badge.new::before {
+.side-nav span.badge.new::before,
+.collapsible span.badge.new::before {
   content: '';
   position: absolute;
   top: 10px;
@@ -3230,6 +3232,10 @@ nav ul a span.badge {
   background-color: #26a69a;
   border-radius: 2px;
   z-index: -1;
+}
+
+.collapsible span.badge.new {
+  z-index: 1;
 }
 
 .video-container {
@@ -5396,7 +5402,7 @@ button.btn-floating {
   margin: 6px 0;
 }
 
-.lean-overlay {
+.modal-overlay {
   position: fixed;
   z-index: 999;
   top: -100px;
@@ -6909,8 +6915,6 @@ input[type=range]:focus::-ms-fill-upper {
   padding-bottom: 60px;
   background-color: #fff;
   z-index: 999;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
   overflow-y: auto;
   will-change: transform;
   -webkit-backface-visibility: hidden;
