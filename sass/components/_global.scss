@@ -2,6 +2,7 @@
 
 html {
  box-sizing: border-box;
+ font-family: $font-family-default;
 }
 *, *:before, *:after {
  box-sizing: inherit;
@@ -39,6 +40,12 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+code,
+kbd,
+pre,
+samp {
+  font-family: $font-family-default;
+}
 
 // Positioning
 .valign-wrapper {
